@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: #000000f3;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0F2027;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.container{
+    position: relative;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    background: #d0e0e7;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+
+}
+.heading{
+    opacity: 1;
+    font-size: 18px;
+    color: rgb(0, 110, 255);
+    padding-top: 130px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 50px;
+}
+
+
+
+.clock{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: rgba(228, 225, 225, 0.753);
+    border: 12px solid rgb(2, 14, 53);
+    box-shadow: 0 0 50px 20px rgba(255, 255, 255, 1) inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotate;
+    transition: 1s infinite ease-in;
+}
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset: 12px;
+    text-align: center;
+}
+.clock span b{
+    transform: rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 20px;
+}
+
+.clock::before{
+    z-index: 2;
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #22ebb8;
+    box-shadow: 0 0 3px 2px black;
+}
+.hand{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: var(--w);
+    height: var(--h);
+    border-radius: 60% 90% 0% 0%;
+}
+.h{
+ font-size: 5px;
+ padding-right: 20px;
+ margin-top: 5px;
+ color: gray;
+}
+
+
